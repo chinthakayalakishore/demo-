@@ -1,0 +1,19 @@
+p{
+    border: 2px solid green;
+    width:20%;
+    display:inline-block;
+    margin:50px;
+    padding: 20px;
+    border-radius: 20px 0px;
+    text-align: justify;
+    color: grey;
+}
+.c1{
+    background: linear-gradient(90deg,pink, green);
+}
+#id1{
+   background: linear-gradient(90deg,pink, green);
+}
+.c2{
+    background: linear-gradient(90deg,pink, green);
+}

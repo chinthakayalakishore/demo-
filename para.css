@@ -1,0 +1,15 @@
+p{
+    border: 5px solid green;
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 20px 5px;
+    text-align:"justify"
+}
+.c1{
+    background: linear-gradient(69deg,black,white);
+}
+#id1{
+    background: linear-gradient(69deg,black,white);
+}
