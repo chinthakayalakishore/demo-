@@ -1,0 +1,20 @@
+ul,ol{
+    border: 3px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    width: 20%;
+    background-color: yellowgreen;
+    display: inline-block;
+}
+li{
+    border: 2px solid red;
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+    border-radius: 30px;
+
+}
+li:hover{
+    background-color: orange;
+}

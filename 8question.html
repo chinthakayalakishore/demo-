@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables with CSS</title>
+        <style>
+            table{
+                width: 30%;
+                text-align: center;
+                border: 1px solid gray;
+            }
+            th,td{
+                border: 1px solid gray;
+            }
+            th{
+                height: 50px;
+            }
+            td{
+                height: 50px;
+            }
+            tr:nth-child(4){
+                text-align: left;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <table border="1" align="center">
+            <tr>
+                <th rowspan="3"><br><br>Table 1</th>
+                <th colspan="2">Table 1</th>
+                
+            </tr>
+            <tr>
+                
+                <td>Table 1</td>
+                <td>Column 3</td>
+            </tr>
+            <tr>
+                
+                <td>Table 1</td>
+                <td>Column 3</td>
+            </tr>
+            <tr>
+                <td>Table 1</td>
+                <td colspan="2">Table 1</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>

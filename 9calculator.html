@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tables</title>
+        <style>
+             table{
+                width: 50%;
+                text-align: center;
+                margin: 100px auto;
+                border: 1px solid black;
+                border-collapse: collapse;
+                border-radius: 10px;
+            }
+            th,td{
+                border: 1px solid black;
+            }
+            th{
+                height: 75px;
+            }
+            td{
+                height: 50px;
+            }
+            tr:first-child {
+                  background-color: black;
+                  color: white;
+                  text-align: right;
+                  
+            }
+            tr:nth-child(2){
+             background-color: grey;
+            }
+        </style>
+        <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <table>
+               <!--ROW 1-->
+               <tr>
+                
+                <th colspan="4">0</th>
+               </tr>
+               <!--ROW 2-->
+               <tr>
+               <td>+</td>
+               <td>-</td>
+               <td>x</td>
+               <td><p>&divide;</p></td>
+               </tr>
+               <!--ROW 3-->
+               <tr>
+              <td>7</td> 
+              <td>8</td>
+              <td>9</td>
+              <td rowspan="4" style="background-color:grey; color: white;">=</td>
+              </tr>
+               <!--ROW 4-->
+               <tr>
+                <td>4</td>
+               <td>5</td>
+               <td>6</tr>
+               </tr>
+               <!--ROW 5-->
+               <tr>
+                <td>1</td>
+               <td>2</td>
+               <td>3</tr>
+               </tr>
+
+               <!--ROW 6-->
+               <tr>
+                <td>0</td>
+               <td>.</td>
+               <td>AC</tr>
+               </tr>
+
+        </table>
+    </body>
+</html>
