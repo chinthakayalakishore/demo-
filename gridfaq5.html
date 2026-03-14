@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+grid faq
+        </title>
+        <style>
+            .parent{
+                height: 100vh;
+                display: grid;
+                text-align: center;
+                grid-template-rows: 75px  75px 400px;
+                grid-template-columns: 2fr 2fr 2fr;
+                gap: 10px;
+                grid-template-areas:
+                "header header header"
+                "search search right"
+                "left middle right" ;
+            }
+            .header{
+                grid-area: header;
+                background-color: lightgreen;
+            }
+            .search{
+                grid-area: search;
+                background-color:magenta;
+            }
+            .left{
+                grid-area:left;
+                background-color: orange;
+
+            }
+            .middle{
+                grid-area: middle;
+                background-color: lightgrey;
+
+            }
+            .right{
+                grid-area: right;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="header">Header</div>
+            <div class="search">search</div>
+            <div class="left">Left sidebar</div>
+            <div class="middle">Middle column</div>
+            <div class="right">right sidebar</div>
+        </div>
+    </body>
+</html>
