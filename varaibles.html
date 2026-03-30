@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /*
+            varaibles 
+               varaibles are used to store data
+               ex. string
+                   number
+                   boolean
+                   arrays
+                   objects
+                   --- -
+                   we will declare varaibles in 3 ways 
+                   1.var
+                   2.let
+                   3.const
+                   4. <no keyword>
+
+                 let and const are  released in ES6 version
+
+                 symtax
+                 var/let/const varaible_name = value;
+                 ex. 
+                 var x = "carrerIT";
+                  document.write(x); //careerIT
+
+                  rules of identifier
+                  1.identifier must have a-z,A-Z.0-9,$and_
+                  2.identifier should not start with digits
+                  ex.
+                    var 123abc; //wrong
+                    var abc123
+                    var_123
+                    var_123$abc
+                    var _123#abc; //wrong
+
+                    DATATYPE
+                    datatype representing type of data
+                    we have two types of datatype
+                    1.primitivedatatypes
+                    2.non-primitivedatatypes
+
+                    primitive data types 
+
+                    primitive data types represnting plain data/ normal data
+                    primitive datatype won't supports any predefined properties/predefined functions
+
+                    primitive dataTypes are divided into
+                    1.string
+                    2.number
+                    3.boolean
+                    4.undefined
+                    5.null
+                    6.bigint
+                    7.symbol
+                    
+                    non primitive datatypes are the objects
+                    non primitive datatypes supports predefined properties and predefined functions
+                    ex.
+                    arrays
+                    objects
+                    functions
+                    classes
+                    interfaces
+
+                    primitive dattypes 
+                    we have five data types of numbers(literals)
+                    1.decimal
+                    2.double
+                    3.hexadecimal
+                        hexadecimal starts with 0x (A-F)
+                    4.octal
+                        octal starts with 0o
+                    5.binary
+                       binary starts with 0b
+                    note:hexadecimal, octal and binary are automatically converts to decimal
+
+
+                    STRING
+                    collection of characters are called as string
+                    we will represent string in three ways
+                    1."" doble quotes
+                    2.''single quotes
+                    3.`` backtick
+                    backtick technically called as template literal
+                    template literal released in ES6 version
+                    Q)why template literal
+                    A)it is used to define multi line string
+
+                    BOOLEAN
+                    we have two bolean values 
+                    1.true
+                    2.falses
+                    true means 1
+                    false means 0
+
+                    ternary operator 
+                    condition ? block1 : block2;
+                    if condition is true ,block will execcute otherwise block2 execute
+
+
+            */ 
+           //Addtition
+         /*  var num1 = 200;
+           var num2 = 100;
+           var add = num1 + num2;
+           document.write(add,"<br>");
+
+           //subtraction
+           var num1 =800;
+           var num2= 400;
+           var sub = num1 - num2;
+           document.write(sub,"<br>")
+
+           var hexadecimal = 0x123Abc;
+           document.write(hexadecimal,"<br>")
+
+           var octal = 0o123
+           document.write(octal,"<br>")
+
+           var binary = 0b1010;
+           document.write(binary,"<br>")
+
+           var x = 200;
+           var y = 100;
+           var add = x + y;
+           document.write(add,"<br>");
+
+           var x = 2;
+           var square =x **3 ;
+           document.write(square,"<br>");
+
+           var sub = `js`
+           var msg = `welcome to ${sub}`
+           document.write(msg,"<br>")
+           /*  BOOLEAN
+                    we have two bolean values 
+                    1.true
+                    2.false
+                    true means 1
+                    false means 0
+
+                    ternary operator 
+                    condition ? block1 : block2;
+                    if condition is true ,block will execcute otherwise block2 execute
+           */
+          var flag = true
+          var flag1 = false
+          flag ? document.write(`forent`,`<br>`):document.write(`backend`,"<br>")
+         ! flag ? document.write(`forent`,`<br>`):document.write(`backend`,"<br>")
+          flag1 ? document.write(`forent`,`<br>`):document.write(`backend`,"<br>")
+          !flag1 ? document.write(`forent`,`<br>`):document.write(`backend`,"<br>")
+
+          /*
+          UNDEFINED 
+          varaible declared but value not declared 
+          undefined is primitive datatype
+          undefined with any arthametic operator then result will be NaN
+          */
+         var x;
+         document.write(x,`<br>`)
+         document.write(x+10,`<br>`)
+
+         /*
+         null
+         primitive datatype 
+         representing 0 or blank
+         external intilization required
+         while performing arithemitic operations null will be autimatically converts to 0
+         */
+        var y = null
+        document.write(y,`<br>`)
+        document.write(y+10,`<br>`)
+
+        /*
+        what are the differences b/w undefined and null
+        undefined                                                    null
+        1.primitive data type                               1.primitive data type
+        2.varaible not assigned                             2.null representing 0 or blank
+        called undefined                                        
+        3.external initialization not required             3.external initialization  required
+        4.undefined with any arthemitic operation          4.in any artematic operations it will converts to -0
+        it will be NaN
+    //non primitive datatypes
+    
+        </script>
+    </body>
+</html>     
