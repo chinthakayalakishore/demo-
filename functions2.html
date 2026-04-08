@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     </head>
     <body>
+        <script>
+            $.ajax({
+                url : "https://www.w3schools.com/appml/customers.php",
+                method : "GET",
+                success : (posRes)=>{
+                    let obj = JSON.parse(posRes)
+                    let {records} = obj
+                    document.write(`<table border="1" align="center" cellpadding="10" cellspacing="10">
+                                <tr>
+                                    <th>CustomerName</th>
+                                    <th>City</th>
+                                    <th>Country</th>
+                                </tr>`)
+                    records.forEach((element,index)=>{
+                        document.write(`<tr>
+                            <td>${element.CustomerName}</td>
+                            <td>${element.City}</td>
+                            <td>${element.Country}</td>
+                            </tr>`)
+                    })
+                    document.write(`</table>`)
+                },
+                error : (errRes)=>{
+                    document.write(errRes)
+                }
+            })
+        </script>
         <!-- <script>
             //call back function
             let func_one = (para1)=>{
@@ -61,12 +89,12 @@
             // })
             let consume = async ()=>{
                 let res = await promise1
-                document.write(res)
+                document.write(res)   
             }
             consume()
         </script> -->
 
-        <script>
+        <!-- <script>
             let addition = (num)=>{
                 return new Promise((resolve,reject)=>{
                     resolve(num+5)
@@ -96,6 +124,77 @@
                 document.write(divRes)
             }
             consume()
-        </script>
+        </script> -->
+        <!-- <script>
+            let p1 = new Promise((resolve,reject)=>{
+                resolve("hello")
+            })
+            let p2 = new Promise((resolve,reject)=>{
+                resolve("Welcome")
+            })
+            let p3 = new Promise((resolve,reject)=>{
+                resolve("Js!!!!")
+            })
+            Promise.all([p1,p2,p3]).then((posRes)=>{
+                document.write(posRes)
+            },(errRes)=>{
+                document.write(errRes)
+            })
+        </script> -->
+        <!-- <script>
+            let p1 = new Promise((resolve,reject)=>{
+                resolve("hello")
+            })
+            let p2 = new Promise((resolve,reject)=>{
+                reject("error")
+            })
+            let p3 = new Promise((resolve,reject)=>{
+                resolve("Js!!!!")
+            })
+            Promise.allSettled([p1,p2,p3]).then((posRes)=>{
+                console.log(posRes)
+            },(errRes)=>{
+                console.log(errRes)
+            })
+        </script> -->
+        <!-- <script>
+            let p1 = new Promise((resolve,reject)=>{
+                resolve("hello")
+            })
+            let p2 = new Promise((resolve,reject)=>{
+                reject("error")
+            })
+            let p3 = new Promise((resolve,reject)=>{
+                resolve("Js!!!!")
+            })
+            Promise.race([p1,p2,p3]).then((posRes)=>{
+                console.log(posRes)
+            },(errRes)=>{
+                console.log(errRes)
+            })
+        </script> -->
+        <!-- <script>
+            let p1 = new Promise((resolve,reject)=>{
+                setTimeout( ()=>{
+                    resolve("My SQL soon!!!" )
+                },5000)
+            })
+            let p2 = new Promise((resolve,reject)=>{
+                setTimeout( ()=>{
+                    resolve("Mongo DB soon!!!")
+                },1000)
+            })
+            p1.then((posRes)=>{
+                document.write(posRes)
+            },(errRes)=>{
+                document.write(errRes)
+            })
+            p2.then((posRes)=>{
+                document.write(posRes)
+            },(errRes)=>{
+                document.write(errRes)
+            })
+
+        </script> -->
     </body>
 </html>
