@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FULL NAME</title>
+        <style>
+            .fieldset{
+                width: 50px;
+                margin: auto;
+            }
+            .c1{
+        display: flex;
+        justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <label>First Name</label>
+            <input type="text" id="fname" placeholder="Enter your first name">
+            <br><br>
+            <label>Last  Name</label>
+            <input type="text" id="lname" placeholder="Enter your last name">
+            <br><br>
+            <label>Full Name</label>
+            <input type="text" id="res" placeholder="result soon">
+            <br><br>
+            <div class="c1">
+            <button onclick="add()">Full Name</button>
+        </div>
+            <br><br>
+        </fieldset>
+        <script>
+            let add = ()=>{
+                let x = document.getElementById("fname").value
+                let y = document.getElementById("lname").value
+                let z = x + y
+                document.getElementById("res").value = z
+            }
+        </script>
+    </body>
+</html>

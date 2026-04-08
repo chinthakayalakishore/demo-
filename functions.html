@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+       <!---<fieldset>
+            <legend>LOGIN</legend>
+            <input type="text" id="uname" placeholder="enter user name">
+            <br><br>
+            <input type="password" id="upwd" placeholder="enter your password">
+            <br><br>
+            <button onclick="login()">login</button>
+            <br><br>
+            <p id="res"></p>
+        </fieldset> 
+         
+        <fieldset>
+            <legend>CALCULATOR</legend>
+            <input type="number" id="num1" placeholder="enter user num1">
+            <br><br>
+            <input type="number" id="num2" placeholder="enter your num2">
+            <br><br>
+            <input type="number" id="res" placeholder="result soon...">
+            <br><br>
+            <button onclick="add()">Add</button>
+            <br><br>
+            <button onclick="sub()">sub</button>
+            <br><br>
+            <button onclick="mul()">mul</button>
+            <br><br>
+            <button onclick="div()">div</button>
+        </fieldset> 
+        <!-- <script>
+            let add = ()=>{
+                let x = parseInt(document.getElementById("num1").value)
+                let y = parseInt(document.getElementById("num2").value)
+                let z = x + y
+                document.getElementById("res").value = z
+            }
+            let sub = ()=>{
+                let x = parseInt(document.getElementById("num1").value)
+                let y = parseInt(document.getElementById("num2").value)
+                let z = x - y
+                document.getElementById("res").value = z
+            }
+            let mul = ()=>{
+                let x = parseInt(document.getElementById("num1").value)
+                let y = parseInt(document.getElementById("num2").value)
+                let z = x * y
+                document.getElementById("res").value = z
+            }
+            let div = ()=>{
+                let x = parseInt(document.getElementById("num1").value)
+                let y = parseInt(document.getElementById("num2").value)
+                let z = x / y
+                document.getElementById("res").value = z
+            }
+            
+        </script>
+
+
+        <script>
+          /*  let login = ()=>{
+                let x = document.getElementById("uname").value 
+                let y = document.getElementById("upwd").value 
+                if(x == "admin" && y == "admin@123"){
+                    document.getElementById("res").innerHTML = "Login Succes"
+                }else{
+                    document.getElementById("res").innerHTML = "Login Fail"
+
+                }
+            }*/
+        </script>
+        <script> -->
+            //no parameter with return type
+           /* let multiplication = ()=>{
+                let num1=100
+                let num2=200
+                let res =num1*num2
+                return res
+            }
+            let x = multiplication()
+            document.write(x)
+
+    function multiplication() {
+    let num1 = 100;
+    let num2 = 200;
+    let res = num1 * num2;
+    return res;
+}
+
+let x = multiplication();
+document.write(x);  */
+         //no parameter and no return type
+        /* let division =function(){
+        let num1=600
+        let num2=200
+        let res = num1/num2
+        document.write(res)
+         }
+         division() 
+         
+         function division(){
+            let num1=600
+            let num2=200
+            let res = num1/num2
+            return res
+         }
+         let x = division()
+         document.write(x) */
+         //reading data from input field
+
+        //write data to input field
+
+        //handling click event without parameters
+        /* html
+        /*
+       <button onclick=func_one()>
+            button1
+        </button>
+
+        js
+        let func_one=()=>{
+        
+        }
+
+        //handling click event with paramters
+        html
+        <button onclick=func_two(`admin`,`admin@123`)>
+            button2
+        </button>
+        js
+        let func_two=(parameter1,parameter2)=>{
+
+        }
+
+        //handling doubleclick event without parameters
+        html
+        <button ondblclick=func_one()>
+            button1
+        </button>
+        js
+        let func_one=()=>{
+        
+        }
+
+        //handling doubleclick event with parameters
+        html
+        <button ondblclick=func_two(`admin`,`admin@123`)>
+            button2
+        </button>
+        js
+        let func_two=(parameter1,parameter2)=>{
+
+        } 
+
+      
+     let test_func = ()=>"Hello";
+     let res = test_func();
+     document.write(res); 
+     let test_func = num1=>num1*num1;
+     let res = test_func(10);
+     document.write(res)
+
+
+
+     //function hoisting supports by function declarartion and won't support function expression and arrow function
+      
+     
+     #CONSTRUCTOR FUNCTIONS
+     constructor functions are used to create objects 
+     "new" is the keyword used to create the objects
+     Each member in cunstructor function must starts with "this" keyword
+     
+    function class_one(){
+        this.num1 = 200;
+        this.num2 = 100;
+
+    }
+    let obj = new class_one();
+    let x = obj.num1;
+    let y = obj.num2;
+    let add = x + y;
+    document.write(add) 
+    function class_one(){
+        this.getnum1 =function(){
+            return 200;
+
+        }
+        this.getnum2 = function(){
+            return 100;
+        }
+    }
+    let obj = new class_one();
+    let num1 = obj.getnum1();
+    let num2 = obj.getnum2();
+    let add = num1 + num2
+    document.write(add) 
+    function class_one(){
+        this.num1 = 200;
+        this.getnum1 =function(){
+            return this.num1;
+
+        }
+        this.num2 =100;
+        this.getnum2 = function(){
+            return this.num2;
+        }
+    }
+    let obj = new class_one();
+    let num1 = obj.getnum1();
+    let num2 = obj.getnum2();
+    let add = num1 + num2
+    document.write(add) 
+    function class_one(){
+
+    }
+    class_one.prototype.frontend = "React JS"
+    class_one.prototype.backend = "Node JS"
+    class_one.prototype.database = "Mongo DB"
+    
+    let obj = new class_one();
+    let x = obj.frontend
+    let y = obj.backend
+    let z = obj.database
+    document.write(x)
+    document.write(y)
+    document.write(z) 
+    function class_one(){
+
+    }
+    class_one.prototype.getFrontend = function(){
+        return "React JS  "
+    }
+     class_one.prototype.getBackend = function(){
+        return "Backend  "
+     }
+     class_one.prototype.getDatabase = function(){
+        return "Database  "
+    }
+    let obj = new class_one();
+    let res1 = obj.getFrontend()
+    document.write(res1)
+    let res2 = obj.getBackend()
+    document.write(res2)
+    let res3 = obj.getDatabase()
+    document.write(res3) 
+    function class_one(){}
+    class_one.prototype.num1 = 300;
+
+    function class_two(){}
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.num2 = 200;
+
+    function class_three(){}
+    class_three.prototype = Object.create(class_two.prototype);
+    class_three.prototype.num3 = 100;
+
+    let obj =new class_three()
+    let x = obj.num1
+    let y = obj.num2
+    let z = obj.num3
+    let res = (x+y+z)
+    document.write(res) */
+    /*function class_one(){}
+    class_one.prototype.getFontend = function(){
+        return "React JS "
+    }
+    function class_two(){}
+    class_two.prototype = Object.create(class_one.prototype);
+    class_two.prototype.getBackend ;
+          return "Backend"
+
+    function class_three(){}
+    class_three.prototype = Object.create(class_two.prototype);
+    class_three.prototype.getDatabase
+    return "Database"
+    let obj =new class_three()
+    let x = obj.getFontend
+    let y = obj.getBackend
+    let z = obj.getDatabase
+    document.write(x)
+    document.write(y)
+    document.write(z) */
+
+    
+    
+
+
+
+        </script> -->
+    </body>
+</html>

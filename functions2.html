@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <script>
+            //call back function
+            let func_one = (para1)=>{
+                para1()   
+            }
+            func_one(  ()=>{
+                document.write("welcome to the class!!!")
+            })
+        </script> -->
+        <!-- <script>
+            let addition = (num,callback)=>{
+                callback(num+5,false)
+            }
+            let subtraction = (num,callback)=>{
+                callback(num-3,false)
+
+            }
+            let multiplication = (num,callback)=>{
+                callback(num*2,false)
+
+            }
+            let division = (num,callback)=>{
+                callback(num/4,false)
+
+            }
+            addition(5,(addRes,flag)=>{
+                if (!flag){
+                    subtraction(addRes,(subRes,flag)=>{
+                        if(!flag){
+                            multiplication(subRes,(mulRes,flag)=>{
+                                if(!flag){
+                                    division(mulRes,(divRes,flag)=>{
+                                        if(!flag){
+                                            document.write(divRes)
+                                        }
+                                    })
+                                }
+
+                            })
+                        }
+
+                    })
+                }
+            })
+            //why call back funtions  to do API  calls (GET,POST,PUT.....)
+        </script> -->
+        <!-- <script>
+            let promise1 = new Promise((resolve,reject)=>{
+                resolve("data from the server!!!!")
+            })
+            // promise1.then((posRes)=>{
+            //     document.write(posRes)
+            // },(errRes)=>{
+            //     console.log(errRes)
+            // })
+            let consume = async ()=>{
+                let res = await promise1
+                document.write(res)
+            }
+            consume()
+        </script> -->
+
+        <script>
+            let addition = (num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num+5)
+                })
+            }
+            let subtraction = (num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num-2)
+                })
+            }
+            let multiplication = (num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num*5)
+                })
+            }
+            let division = (num)=>{
+                return new Promise((resolve,reject)=>{
+                    resolve(num/2)
+                })
+            }
+            
+            let consume = async()=>{
+                let addRes = await addition(5)
+                let subRes = await subtraction(addRes)
+                let mulRes = await multiplication(subRes)
+                let divRes = await division(mulRes)
+                document.write(divRes)
+            }
+            consume()
+        </script>
+    </body>
+</html>
