@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 
     </head>
     <body>
-        <script>
+        <!-- <script>
             $.ajax({
                 url : "https://www.w3schools.com/appml/customers.php",
                 method : "GET",
@@ -31,7 +31,7 @@
                     document.write(errRes)
                 }
             })
-        </script>
+        </script> -->
         <!-- <script>
             //call back function
             let func_one = (para1)=>{
@@ -196,5 +196,94 @@
             })
 
         </script> -->
+        <script>
+          /*  //IIFE
+            Immidiate Invokable Functional expression
+            when ever we define the function , it willl invoke(execute)automatically called as IIFE
+            IIFE used to overcome global polluting issue
+            syntax 
+            *********************
+            (function(para1,para2,para3,paran){
+                   bussiness logic
+            })(arg1,arg2,arg3,   argn)
+
+            ((para1,para2,para3,paran)=>{
+                   bussiness logic
+            })(arg1,arg2,arg3,   argn)
+
+
+            */
+        //    (()=>{
+        //     document.write("welcome to IIFE")
+        //    })()
+        //  let res = (()=>{
+        //     return 100
+        //    })()
+        //    document.write(res)
+        
+        </script>
+        <!-- <script>
+              let res = ((num1)=>{
+            return num1*num1
+           })(100)
+           document.write(res)
+        </script> -->
+        <!-- <script>
+            /*
+            genarator function
+            ***********
+            genarator functions are used to
+            1.pause the execution
+            2.resume the execution
+            3.read the data value by value
+            use case
+            ***********
+            1.async flows
+            2.lazy loading
+              
+            genarator functions stars with "*"
+            yield is the keyword used to passs th execution
+            next () is the function , is used to resume the exxecution
+
+            */
+           function *test_func(){
+            yield 100
+            yield 200
+            yield 300
+           }
+           let cursor = test_func()
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+        </script> -->
+        <!-- <script>
+             function *test_func1(){
+            yield 1000
+            yield *func_one2()
+            yield 3000
+           }
+           function *func_one2(){
+            yield 2000
+           }
+           let cursor = test_func1()
+           for (let i=0;i<3;i++){
+            console.log(cursor.next())
+           }
+
+        </script> -->
+        <script>
+             function *test_func(){
+            yield 1000
+            yield 2000
+            return 3000
+            yield 4000
+           }
+           let cursor = test_func()
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+           console.log(cursor.next() )
+        </script>
     </body>
 </html>
