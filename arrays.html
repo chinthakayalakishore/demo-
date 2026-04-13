@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <script>
+            /*
+            Arrays manipulation
+            ****************
+            collection of indexed elements called as arrays
+            index start from "0"
+            we will represent array with the help of "[]"
+            we will access array elements with the help of "indexes"
+                      */
+            let array = [10,20,30,40,50]
+            let e1 =array[0]
+            document.write(e1,"<br>")
+            let e2 =array[1]
+            document.write(e2,"<br>")
+            let e3 =array[2]
+            document.write(e3,"<br>")
+            let e4 =array[3]
+            document.write(e4,"<br>")
+            let e5 =array[4]
+            document.write(e5,"<br>")
+        </script> -->
+        <!-- <script>
+             let array = [10,20,30,40,50]
+            let e1 =array.at(0)
+            let e11 =array.at(-5)
+            let e2 =array.at(1)
+            let e22 =array.at(-4)
+            let e3 =array.at(2)
+            let e33 =array.at(-3)
+            let e4 =array.at(3)
+            let e44 =array.at(-2)
+            let e5 =array.at(4)
+            let e55 =array.at(-1)
+            document.write(e1,"<br>",e11,"<br>",e2,"<br>",e22,"<br>",e3,"<br>",e33,"<br>",e4,"<br>",e44,"<br>",e5,"<br>",e55)
+
+        </script> -->
+        <!-- <script>
+            /*
+            some()
+            ******
+            if atleast one element satisfies the condition it will return ture otherwise it will return false
+            */
+           let array = [10,20,30,40,50]
+           let flag =array.some((element,index)=>{
+            return element<=10
+           })
+           document.write(flag,"<br>")
+           let flag1 =array.some((element,index)=>{
+            return element<10
+           })
+           document.write(flag1)
+        </script> -->
+        <!-- <script>
+            /*
+            every()
+            ******
+            if all element satisfies the condition it will return ture otherwise it will return false
+            */
+           let array = [10,20,30,40,50]
+           let flag =array.every((element,index)=>{
+            return element<=50
+           })
+           document.write(flag,"<br>")
+           let flag1 =array.every((element,index)=>{
+            return element<50
+           })
+           document.write(flag1)
+        </script> -->
+        <!-- <script>
+            /*
+            map()
+            *******
+            map() is used to manipulate every element in array
+            map()relesed in ES6 version
+            map() function is called as HOF(Higher order function)
+            map() function is create new array  
+            map() function is immutable function          */
+            let array = [10,20,30,40,50]
+           let new_arr =array.map((element,index)=>{
+            return element*10
+           })
+            console.table(new_arr)
+            console.log(array)
+            document.write(new_arr)
+        </script> -->
+        <!-- <script>
+            /*
+            filter()
+            *********
+            filter() function is used to apply conditions
+            filter() function relesed in ES6 version
+            filter() function is called as HOF(Higher order function)
+            filter() function is create new array  
+            filter() function is immutable function
+            */
+            let array = [10,20,30,40,50]
+           let new_arr =array.filter((element,index)=>{
+            return element>=30
+           })
+            console.table(new_arr)
+            document.write(new_arr)
+
+        </script> -->
+        <!-- <script>
+            /*
+            reduce()
+            *********
+            reduce() function is used to apply conditions
+            reduce() function relesed in ES6 version
+            reduce() function is called as HOF(Higher order function)
+            reduce() function is create sum,like sum, product, object, etc. 
+            reduce() function is immutable function
+            */
+           let array = [10,20,30,40,50]
+           let sum1 =array.reduce((firstElemenet,nextElement)=>{
+            return firstElemenet + nextElement
+           })
+           document.write(sum1,"<br>")
+           let sum2 =array.reduce((firstElemenet,nextElement)=>{
+            return firstElemenet + nextElement
+           },150)
+           document.write(sum2)
+           
+
+        </script> -->
+        <!-- <script>
+            /*
+            reduceRight()
+            ************
+            used to do concatination from right to left
+            */
+           let array = [`js`,`To`,`Welcome`]
+           let res =array.reduceRight((firstElemenet,nextElement)=>{
+            return firstElemenet +"  " +nextElement
+           })
+           document.write(res,"<br>")
+
+        </script> -->
+        <script>
+            let array = [20,30,40]
+            document.write(array,"<br>")
+
+            array.push(50)
+            document.write(array,"<br>")
+
+            array.unshift(10)
+            document.write(array,"<br>")
+
+            array.pop()
+            document.write(array,"<br>")
+
+            array.shift(50)
+            document.write(array,"<br>")
+        </script>
+    </body>
+</html>
