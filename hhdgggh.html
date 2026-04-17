@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    let emps = [
+        {empId:"emp101", empname:"emp1", empdep:"cse", empimg:"https://picsum.photos/100?random=1"},
+        {empId:"emp102", empname:"emp2", empdep:"ece", empimg:"https://picsum.photos/100?random=2"},
+        {empId:"emp103", empname:"emp3", empdep:"mech", empimg:"https://picsum.photos/100?random=3"},
+        {empId:"emp104", empname:"emp4", empdep:"civil", empimg:"https://picsum.photos/100?random=4"},
+        {empId:"emp105", empname:"emp5", empdep:"it", empimg:"https://picsum.photos/100?random=5"}
+    ];
+
+    document.write("<table>");
+    document.write("<tr><th>ID</th><th>Name</th><th>Department</th><th>Image</th></tr>");
+
+    for(let i = 0; i < emps.length; i++) {
+        document.write("<tr>");
+        document.write("<td>" + emps[i].empId + "</td>");
+        document.write("<td>" + emps[i].empname + "</td>");
+        document.write("<td>" + emps[i].empdep + "</td>");
+        document.write("<td><img src='" + emps[i].empimg + "'></td>");
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+</script>
+
+</body>
+</html>

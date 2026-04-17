@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <script>
+            /*
+            JSON
+            ******
+            java script object notation
+               or
+            java script objects
+
+            JSON used to transfer the data
+            Json is light weight
+            JSON is network friendly format
+
+            syntax
+            objects---{}
+            array----[]
+            key a
+            */
+           let obj = {
+            frontend : "react ",
+            backend : "nodejs",
+            database : "Mongo DB"
+           }
+           let e1 =obj.frontend
+           document.write(e1,"<br>")
+            let e2 =obj.backend
+           document.write(e2,"<br>")
+            let e3 =obj.database
+           document.write(e3,"<br>")
+
+           //by using square operator
+           let e11 = obj["frontend"];
+           document.write(e11,"<br>")
+
+
+           //using destructiong 
+
+        let {frontend,backend,database} = obj;
+        document.write(frontend,backend,database,"<br>")
+
+        //for in loop
+        for(let key in obj){
+            document.write(obj[key])
+        }
+        </script> -->
+        <!-- <script>
+            let obj = {
+            frontend : "react ",
+            backend : "nodejs",
+            database : "Mongo DB"
+           }
+           let array1=Object.keys(obj)
+           document.write(array1)
+            let array2=Object.values(obj)
+           document.write(array2)
+           
+
+        </script> -->
+        <!-- <script>
+            let obj = {
+            frontend : "react ",
+            backend : "nodejs",
+            database : "Mongo DB"
+           }
+           let str = JSON.stringify(obj)
+           document.write(typeof(str),"<br>")
+
+           let obj2 = JSON.parse(str)
+           document.write(typeof(obj2))
+        </script> -->
+        <!-- <script>
+            let obj = {
+            frontend : "react ",
+            backend : "nodejs",
+            database : "Mongo DB"
+           }
+           delete obj.database;
+           delete obj.frontend;
+           console.log(obj)
+        </script> -->
+
+        <!-- <script>
+             let obj ={
+                key : 100,
+                key : 200
+             }
+             console.log(obj)
+        </script> -->
+
+        <!-- <script>
+             let obj ={
+                key1: 100,
+                key2 : 100
+             }
+             console.log(obj)
+        </script> -->
+
+        <script>
+    let emps = [
+    {empId:"e101",empName:"Emp1",empDept:"CSE",empImg:"https://picsum.photos/80?random=1"},
+    {empId:"e102",empName:"Emp2",empDept:"ECE",empImg:"https://picsum.photos/80?random=2"},
+    {empId:"e103",empName:"Emp3",empDept:"EEE",empImg:"https://picsum.photos/80?random=3"},
+    {empId:"e104",empName:"Emp4",empDept:"IT",empImg:"https://picsum.photos/80?random=4"},
+    {empId:"e105",empName:"Emp5",empDept:"CIVIL",empImg:"https://picsum.photos/80?random=5"}
+];
+
+    document.write(`
+        <table border="1" align="center" cellpadding="10" cellspacing="10">
+            <tr>
+                <th>empId</th>
+                <th>empName</th>
+                <th>empDept</th>
+                <th>empImg</th>
+            </tr>
+    `);
+
+    emps.forEach((element) => {
+        document.write(`
+            <tr>
+                <td>${element.empId}</td>
+                <td>${element.empName}</td>
+                <td>${element.empDept}</td>
+                <td>
+                    <img src="${element.empImg}" width="80">
+                </td>
+            </tr>
+        `);
+    });
+
+    document.write(`</table>`);
+</script>
+    </body>
+</html>
