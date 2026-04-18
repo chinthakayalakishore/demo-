@@ -100,7 +100,7 @@
              console.log(obj)
         </script> -->
 
-        <script>
+        <!-- <script>
     let emps = [
     {empId:"e101",empName:"Emp1",empDept:"CSE",empImg:"https://picsum.photos/80?random=1"},
     {empId:"e102",empName:"Emp2",empDept:"ECE",empImg:"https://picsum.photos/80?random=2"},
@@ -133,6 +133,296 @@
     });
 
     document.write(`</table>`);
-</script>
+</script> -->
+
+<!-- <script>
+    let obj = {
+        key1 : 100
+    }
+    //freeze allows only read and dont allows write ,update,and delete
+    Object.freeze(obj)
+
+    //read
+    console.log(obj)
+
+    //update
+    key1 : 1000
+    console.log(obj)
+
+    //write
+    obj.key2 = 200
+    console.log(obj)
+
+    //delete
+    delete obj.key1
+    console.log(obj)
+</script> -->
+<!-- <script>
+    //seal allows read and update and dont allow delete and write
+    let obj = {
+        key1 : 100
+    }
+    Object.seal(obj)
+
+    //read
+    console.log(obj)
+
+    //update
+    obj.key1 = 1000
+    console.log(obj)
+
+    //write
+    obj.key2 = 200
+    console.log(obj)
+
+    //delete
+    delete obj.key1
+    console.log(obj)
+
+</script> -->
+<!-- <script>
+    /*
+    defineproperty()
+    **********
+    allows to addd properties ynamically & allos customization
+
+    */
+   let obj = {
+        key1 : 100
+    }
+    Object.defineProperty(obj,"key2",{value:200,Writable:false})
+    Object.defineProperty(obj,"key3",{value:300,Writable:true})
+    console.log(obj)
+
+    obj.key1 = 1000
+    obj.key2 = 2000
+    obj.key3 = 3000
+    console.log(obj)
+
+    delete obj.key1
+    delete obj.key2
+    delete obj.key3
+    console.log(obj)
+
+
+</script> -->
+
+<!-- <script>
+
+     let obj = {
+        key1 : 100
+    }
+    Object.defineProperties(obj,{
+        key2:{value:200,Writable:false},
+        key3:{value:300,Writable:true}
+    })
+    console.log(obj)
+     obj.key1 = 1000
+    obj.key2 = 2000
+    obj.key3 = 3000
+    console.log(obj)
+
+    delete obj.key1
+    delete obj.key2
+    delete obj.key3
+    console.log(obj)
+</script> -->
+
+<!-- <script>
+    let obj1 = {
+        key1 : 100
+    }
+    let array = Object.entries(obj1)
+    console.log(obj1)
+
+    let obj2 = Object.fromEntries(array)
+    console.log(obj2)
+    
+</script> -->
+
+<!-- <script>
+    let obj1 = {
+        key1 : 100
+    }
+
+    obj1.key1 = 1000
+    obj1.key2 = 2000
+    obj1.key3 = 3000
+    console.log(obj1)
+
+     delete obj1.key1
+    console.log(obj1)
+
+    console.log(obj1.hasOwnProperty("key2") )
+</script> -->
+<!-- <script>
+    let obj1 = {
+        obj2 :{
+            obj3:{
+                msg:"Hello"
+            }
+        }
+    }
+    let {obj2} =obj1
+    let {obj3} = obj2
+    let {msg} = obj3
+    console.log(msg)
+     
+    </script> -->
+
+    <!-- <script>
+
+let obj1 ={
+name: "ECoen-Appln",
+category:"Laptops",
+Laptops:[
+
+{cost:10000,ling:"https://mern-bkt.s3.eu-north-1.amazonaws.com/laptop1.jpeg"},
+{cost:20000, Ling:"https://sera-bkt.s3.eu-north-1.amazonaws.com/laptop2.jpeg"},
+{cost:30000, Ling:"https://sern-bkt.s3.eu-north-1.amazonaws.com/Laptop3.jpeg"},
+{cost:40000, ling:"https://mern-bkt.s3.eu-north-1.amazonaws.com/laptop4.jpeg"},
+{cost:50000, ling:"https://mern-bkt.s3.eu-north-1.amazonaws.com/laptop5.jpeg"}]
+}
+let {name,category,laptops} obj1:
+document.write('<table border="1" align="center" cellpadding="10" cellspacing="10">
+<tr>
+
+<td colspan="2"x4(name)</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2">${category)</td>
+
+</tr>");
+
+Laptops.forEach((element, index)>(
+
+document.write("<tr>
+
+<td>$(element.cost)</td>
+
+<img src=$(element.ling) width50">
+
+
+
+
+
+31:
+
+</tr>');
+
+
+
+document.write("</table>");
+
+
+
+        
+    </script> -->
+
+    <!-- <script>
+
+        let obj ={
+            obj:{
+                obj:{
+                    msg:"hello"
+                }
+            }
+        }
+        let {obj:x} = obj
+        let {obj:y} = x
+        let {msg} =y
+        console.log(msg)
+    </script> -->
+
+    <!-- <script>
+        let obj1 ={num1:100}
+        let obj2 ={num2:200}
+        let obj3 ={num3:300}
+
+        //old 
+
+        let new_1 = Object.assign(obj1,obj2,obj3)
+        console.log(new_1)
+
+        //spread opeeerator
+        let new_2 = {...obj1,...obj2,...obj3}
+        console.log(new_2)
+    </script> -->
+
+    <!-- <script>
+        let a =[100]
+        let b =[200]
+        let c = [300]
+        let new_1 = a.concat(b,c)
+        console.log(new_1)
+
+        let new_2 = [...a,...b,...c]
+        console.log(new_2)
+    </script> -->
+    <!-- <script>
+        let obj1={
+            num1:100,
+            num2:200,
+            num3:300,
+            num4:400,
+            num5:500
+        }
+        let {num1,...obj2}=obj1
+        let {num2,num3,...obj3}=obj2
+        let{num4,...obj4}=obj3
+        let{num5}=obj4
+        console.log(num1,num2,num3,num4,num5)
+    </script> -->
+
+    <!-- <script>
+        let a1=[100,200,300,400,500]
+        let [num1,...a2]=a1
+        let [num2,num3,...a3]=a2
+        let[num4,...a4]=a3
+        let [num5]=a4
+        console.log(num1,num2,num3,num4,num5)
+    </script> -->
+
+    <!-- <script>
+        let db ={
+            ora_db1 : function(){
+                console.log("oracle comming soon !!!!!!!!!")
+            },
+            ora_db2 :function(para1){
+                return `${para1} comming soon!!!!!`
+
+            },
+            
+        }
+        db.ora_db1()
+        let res1 = db.ora_db2("oracle")
+        console.log(res1)
+    </script> -->
+
+    <!-- <script>
+        let db_com ={
+            mongodb1:()=>{
+                return "mongodb soon!!!"
+            },
+            mongodb2:(para1)=>{
+                return "mongodb soon!!!"
+        }
+        let res1 =db_com.mongodb1.mongodb2()
+        console.log(res1)
+    </script> -->
+    <script>
+        let obj1 ={
+            key1:100
+        }
+        let xerox = {...obj1}
+        obj1.key2 = 200
+
+        console.log(obj1)
+        console.log(xerox)
+    </script>
+
     </body>
 </html>
